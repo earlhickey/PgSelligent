@@ -1,0 +1,23 @@
+{
+  "name" : "srglibs/selligent",
+  "description" : "ZF2 module for Selligent Individual API",
+  "require" : {
+    "php" : ">=5.3.3",
+    "zendframework/zendframework" : ">=2.2",
+    "zf-commons/zfc-base" : "=dev-master"
+  },
+  "authors" : [ {
+    "name" : "Patrick Groot",
+    "email" : "pgroot@gmail.com",
+    "homepage" : "http://pg13.nl/"
+  } ],
+  "keywords" : [ "zf2" ],
+  "autoload" : {
+    "psr-0" : {
+      "Selligent" : "src/"
+    },
+    "classmap" : [ "./Module.php" ]
+  },
+  "type" : "library",
+  "homepage" : "http://skyradiogroup.nl"
+}
