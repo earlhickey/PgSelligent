@@ -1,5 +1,5 @@
 {
-  "name" : "srglibs/selligent",
+  "name" : "earlhickey/zf2-selligent",
   "description" : "ZF2 module for Selligent Individual API",
   "require" : {
     "php" : ">=5.3.3",
@@ -19,5 +19,5 @@
     "classmap" : [ "./Module.php" ]
   },
   "type" : "library",
-  "homepage" : "http://skyradiogroup.nl"
+  "homepage" : "https://github.com/earlhickey/zf2-selligent"
 }
