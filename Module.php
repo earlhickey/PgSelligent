@@ -22,4 +22,21 @@ class Module implements Feature\AutoloaderProviderInterface, Feature\ConfigProvi
         return include __DIR__ . '/config/module.config.php';
     }
 
+    /**
+     * Create controller plugin selligent
+     * Use in controller as $this->selligent()->functionName($data);
+     */
+    public function getControllerPluginConfig()
+    {
+        return array(
+            'factories' => array(
+                'selligent' => function ($sm) {
+                    $plugin = new Controller\Plugin\Selligent;
+                    $plugin->setService($sm->getServiceLocator()->get('Selligent\Client\Selligent'));
+                    return $plugin;
+                },
+            ),
+        );
+    }
+
 }

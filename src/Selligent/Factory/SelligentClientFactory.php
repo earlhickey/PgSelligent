@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * 
  * @author pG
  *
  */
@@ -19,7 +19,7 @@ class SelligentClientFactory implements FactoryInterface
 
         if (!isset($config['selligent'])) {
             throw new \RuntimeException(
-                'No config was found for SelligentModule. Did you copy the `selligent.local.php` file to your autoload folder?'
+                'No config was found for Selligent Module. Did you copy the `selligent.global.php` file to your autoload folder?'
             );
         }
 

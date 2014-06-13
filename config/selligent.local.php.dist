@@ -3,12 +3,14 @@
 return array(
     'selligent' => array(
         /**
-         * Specify your Selligent list id.
-         * - skyradio      339
-         * - radioveronica 340
-         * - classicfm     341
-         * - skyradiogroup 342
+         * Login and password for Selligent automation user
          */
+        'login' => '',
+        'password' => '',
+        /**
+         * Specify your Selligent client id for soap client
+         */
+        'clientId' => '',
         'listId' => ''
     )
 );
