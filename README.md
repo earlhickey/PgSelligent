@@ -52,14 +52,20 @@ Installation
     ```
 2. Copy `./vendor/earlhickey/zf2-selligent/config/selligent.global.php.dist` to `./config/autoload/selligent.global.php` and change the values as desired.
 
+
 Usage
 -----
 
+    ```php
+    <?php
+    // Selligent email marketing opt-in
+    $selligent = $this->selligent()->subscribe($recipient);
+    ```
 
-// Selligent email marketing opt-in
-$selligent = $this->selligent()->subscribe($recipient);
+    ```php
+    <?php
+    // Selligent email marketing opt-out
+    $selligent = $this->selligent()->unsubscribe($recipient);
+    ```
 
-// Selligent email marketing opt-out
-$selligent = $this->selligent()->unsubscribe($recipient);
 
----
