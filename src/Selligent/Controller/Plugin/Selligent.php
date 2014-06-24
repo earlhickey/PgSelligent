@@ -16,9 +16,9 @@ use Selligent\Client\Selligent as SelligentClient;
  */
 class Selligent extends AbstractPlugin
 {
-	protected $service;
+    protected $service;
 
-	public function subscribe($recipient)
+    public function subscribe($recipient)
     {
         return $this->getService()->subscribe($recipient);
     }
@@ -26,6 +26,11 @@ class Selligent extends AbstractPlugin
     public function unsubscribe($recipient)
     {
         return $this->getService()->unsubscribe($recipient);
+    }
+
+    public function setListId($listId)
+    {
+        return $this->getService()->setListId($listId);
     }
 
     public function getService()

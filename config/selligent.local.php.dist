@@ -11,6 +11,23 @@ return array(
          * Specify your Selligent client id for soap client
          */
         'clientId' => '',
-        'listId' => ''
+        /**
+         * Specify your Selligent lists
+         *
+         * first in array will be used as default
+         * others can be set with setListId() in controller
+         *
+         * Accepted values: array
+         */
+        'list' => array(
+            'list-name' => array(
+                /**
+                 * Specify your Selligent list id
+                 *
+                 * Accepted values: integer
+                 */
+                'listId' => 123,
+            ),
+        ),
     )
 );

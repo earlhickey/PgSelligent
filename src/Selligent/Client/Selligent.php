@@ -40,8 +40,12 @@ class Selligent extends EventProvider
 
         /**
          * Set list properties
+         * 
+         * get the listId from the first list in config list array 
+         * this should be the main list but can be overwritten with setListId()
+         *
          */
-        $this->listId = $config['listId'];
+        $this->listId = current($config['list'])['listId'];
 
         /**
          * Set client id
@@ -75,6 +79,11 @@ class Selligent extends EventProvider
             array('Key' => 'OPTOUT', 'Value' => null),
             array('Key' => 'OPTOUT_DT', 'Value' => null),
         );
+
+        // add company to input when set
+        if (isset($recipient->company)) {
+           $changes[] = array('Key' => 'COMPANY', 'Value' => $recipient->company);
+        }
 
         // check if user exists
         $user = $this->getUserByConstraint(sprintf("MAIL = '%s'", $recipient->email));
@@ -118,6 +127,16 @@ class Selligent extends EventProvider
         }
 
         return false;
+    }
+
+    /**
+     * SetListId
+     * @param int $listId
+     * @return int
+     */
+    public function setListId($listId)
+    {
+        return $this->listId = $listId;
     }
 
 
