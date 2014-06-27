@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Zf2-selligent by earlhickey</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Zf2-selligent</h1>
+        <h2>ZF2 module for Selligent Individual API</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/earlhickey/zf2-selligent/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/earlhickey/zf2-selligent/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/earlhickey/zf2-selligent" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="zf2-selligent" class="anchor" href="#zf2-selligent"><span class="octicon octicon-link"></span></a>zf2-selligent</h1>
+
+<p>ZF2 module for Selligent Individual API</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a name="main-setup" class="anchor" href="#main-setup"><span class="octicon octicon-link"></span></a>Main Setup</h3>
+
+<h4>
+<a name="by-cloning-project" class="anchor" href="#by-cloning-project"><span class="octicon octicon-link"></span></a>By cloning project</h4>
+
+<ol>
+<li>Install the <a href="https://github.com/earlhickey/zf2-selligent">zf2-selligent</a> ZF2 module
+by cloning it into <code>./vendor/</code>.</li>
+<li>Clone this project into your <code>./vendor/</code> directory.</li>
+</ol><h4>
+<a name="with-composer" class="anchor" href="#with-composer"><span class="octicon octicon-link"></span></a>With composer</h4>
+
+<ol>
+<li>
+<p>Add this project in your composer.json:</p>
+
+<div class="highlight highlight-json"><pre><span class="s2">"require"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">"earlhickey/zf2-selligent"</span><span class="p">:</span> <span class="s2">"dev-master"</span>
+<span class="p">}</span>
+<span class="s2">"repositories"</span> <span class="err">:</span> <span class="p">[</span>
+        <span class="s2">"type"</span><span class="err">:</span><span class="s2">"vcs"</span><span class="p">,</span>
+        <span class="s2">"url"</span><span class="err">:</span> <span class="s2">"https://github.com/earlhickey/zf2-selligent"</span>
+    <span class="err">}</span>
+<span class="p">]</span>
+</pre></div>
+</li>
+<li>
+<p>Now tell composer to download ZfcUser by running the command:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>php composer.phar update
+</pre></div>
+</li>
+</ol><h4>
+<a name="post-installation" class="anchor" href="#post-installation"><span class="octicon octicon-link"></span></a>Post installation</h4>
+
+<ol>
+<li>
+<p>Enabling it in your <code>application.config.php</code> file.</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">return</span> <span class="k">array</span><span class="p">(</span>
+    <span class="s1">'modules'</span> <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
+        <span class="c1">// ...</span>
+        <span class="s1">'Selligent'</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="c1">// ...</span>
+<span class="p">);</span>
+</pre></div>
+</li>
+<li>Copy <code>./vendor/earlhickey/zf2-selligent/config/selligent.global.php.dist</code> to <code>./config/autoload/selligent.global.php</code> and change the values as desired.</li>
+</ol><h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<ol>
+<li>
+<p>Opt-in</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// Selligent email marketing opt-in</span>
+<span class="nv">$selligent</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">selligent</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">subscribe</span><span class="p">(</span><span class="nv">$recipient</span><span class="p">);</span>
+</pre></div>
+</li>
+<li>
+<p>Opt-out</p>
+
+<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// Selligent email marketing opt-out</span>
+<span class="nv">$selligent</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">selligent</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">unsubscribe</span><span class="p">(</span><span class="nv">$recipient</span><span class="p">);</span>
+</pre></div>
+</li>
+</ol>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
