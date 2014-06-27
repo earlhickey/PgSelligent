@@ -1,6 +1,7 @@
 {
   "name" : "earlhickey/zf2-selligent",
   "description" : "ZF2 module for Selligent Individual API",
+  "license": "BSD-3-Clause",
   "require" : {
     "php" : ">=5.3.3",
     "zendframework/zendframework" : "2.3.*",
