@@ -23,11 +23,6 @@ Installation
     "require": {
         "earlhickey/zf2-selligent": "dev-master"
     }
-    "repositories" : [
-            "type":"vcs",
-            "url": "https://github.com/earlhickey/zf2-selligent"
-        }
-    ]
     ```
 
 2. Now tell composer to download ZfcUser by running the command:
