@@ -21,7 +21,7 @@ Installation
 
     ```json
     "require": {
-        "earlhickey/pg-selligent": "dev-master"
+        "earlhickey/pg-selligent": "1.*"
     }
     ```
 
