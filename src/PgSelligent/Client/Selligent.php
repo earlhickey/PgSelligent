@@ -3,7 +3,6 @@
 namespace PgSelligent\Client;
 
 use ZfcBase\EventManager\EventProvider;
-use Zend\Soap\Client;
 
 /**
  * PgSelligent Individual API wrapper

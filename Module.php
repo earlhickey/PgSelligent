@@ -21,6 +21,10 @@ class Module implements Feature\AutoloaderProviderInterface, Feature\ConfigProvi
     {
         return include __DIR__ . '/config/module.config.php';
     }
+    
+    public function getModuleDependencies() {
+    	return array('ZfcBase');
+    }
 
     /**
      * Create controller plugin selligent
