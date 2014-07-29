@@ -50,19 +50,28 @@ Installation
 
 ### Usage
 
-1. Opt-in
+1. Subscribe
 
     ```php
-    <?php
+    //  create recipient
+    $recipient = new \stdClass();
+    $recipient->firstname = 'John';
+    $recipient->lastname = 'Doe';
+    $recipient->gender = '';
+    $recipient->dateOfBirth = '';
+    $recipient->email = 'johndoe@domain.com';
+
     // Selligent email marketing opt-in
-    $selligent = $this->selligent()->subscribe($recipient);
+    $subscribe = $this->selligent()->subscribe($recipient);
     ```
-2. Opt-out
+
+3. Unsubscribe
 
     ```php
-    <?php
+    //  create recipient
+    $recipient = new \stdClass();
+    $recipient->email = 'johndoe@domain.com';
+
     // Selligent email marketing opt-out
-    $selligent = $this->selligent()->unsubscribe($recipient);
+    $unsubscribe = $this->selligent()->unsubscribe($recipient);
     ```
-
-
