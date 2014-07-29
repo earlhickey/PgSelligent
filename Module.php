@@ -1,6 +1,6 @@
 <?php
 
-namespace Selligent;
+namespace PgSelligent;
 
 use Zend\ModuleManager\Feature;
 
@@ -32,7 +32,7 @@ class Module implements Feature\AutoloaderProviderInterface, Feature\ConfigProvi
             'factories' => array(
                 'selligent' => function ($sm) {
                     $plugin = new Controller\Plugin\Selligent;
-                    $plugin->setService($sm->getServiceLocator()->get('Selligent\Client\Selligent'));
+                    $plugin->setService($sm->getServiceLocator()->get('PgSelligent\Client\Selligent'));
                     return $plugin;
                 },
             ),

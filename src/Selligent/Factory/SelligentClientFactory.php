@@ -1,15 +1,10 @@
 <?php
-/**
- * 
- * @author pG
- *
- */
 
-namespace Selligent\Factory;
+namespace PgSelligent\Factory;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Selligent\Client\Selligent;
+use PgSelligent\Client\Selligent;
 
 class SelligentClientFactory implements FactoryInterface
 {
@@ -19,7 +14,7 @@ class SelligentClientFactory implements FactoryInterface
 
         if (!isset($config['selligent'])) {
             throw new \RuntimeException(
-                'No config was found for Selligent Module. Did you copy the `selligent.global.php` file to your autoload folder?'
+                'No config was found for PgSelligent Module. Did you copy the `pg-selligent.global.php` file to your autoload folder?'
             );
         }
 

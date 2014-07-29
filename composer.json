@@ -1,5 +1,5 @@
 {
-  "name" : "earlhickey/zf2-selligent",
+  "name" : "earlhickey/pg-selligent",
   "description" : "ZF2 module for Selligent Individual API",
   "license": "BSD-3-Clause",
   "require" : {
@@ -12,13 +12,13 @@
     "email" : "pgroot@gmail.com",
     "homepage" : "http://pg13.nl/"
   } ],
-  "keywords" : [ "zf2" ],
+  "keywords" : [ "zf2", "selligent", "pg13" ],
   "autoload" : {
     "psr-0" : {
-      "Selligent" : "src/"
+      "PgSelligent" : "src/"
     },
     "classmap" : [ "./Module.php" ]
   },
   "type" : "library",
-  "homepage" : "https://github.com/earlhickey/zf2-selligent"
+  "homepage" : "https://github.com/earlhickey/PgSelligent"
 }

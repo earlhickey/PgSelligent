@@ -1,4 +1,4 @@
-zf2-selligent
+PgSelligent
 =============
 
 ZF2 module for Selligent Individual API
@@ -11,7 +11,7 @@ Installation
 
 #### By cloning project
 
-1. Install the [zf2-selligent](https://github.com/earlhickey/zf2-selligent) ZF2 module
+1. Install the [zf2-selligent](https://github.com/earlhickey/PgSelligent) ZF2 module
    by cloning it into `./vendor/`.
 2. Clone this project into your `./vendor/` directory.
 
@@ -21,11 +21,11 @@ Installation
 
     ```json
     "require": {
-        "earlhickey/zf2-selligent": "dev-master"
+        "earlhickey/pg-selligent": "dev-master"
     }
     ```
 
-2. Now tell composer to download ZfcUser by running the command:
+2. Now tell composer to download PgSelligent by running the command:
 
     ```bash
     $ php composer.phar update
@@ -40,12 +40,12 @@ Installation
     return array(
         'modules' => array(
             // ...
-            'Selligent',
+            'PgSelligent',
         ),
         // ...
     );
     ```
-2. Copy `./vendor/earlhickey/zf2-selligent/config/selligent.global.php.dist` to `./config/autoload/selligent.global.php` and change the values as desired.
+2. Copy `./vendor/earlhickey/pg-selligent/config/pg-selligent.global.php.dist` to `./config/autoload/pg-selligent.global.php` and change the values as desired.
 
 
 ### Usage

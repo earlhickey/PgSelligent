@@ -1,16 +1,16 @@
 <?php
 
-namespace Selligent\Client;
+namespace PgSelligent\Client;
 
 use ZfcBase\EventManager\EventProvider;
 use Zend\Soap\Client;
 
 /**
- * Selligent Individual API wrapper
+ * PgSelligent Individual API wrapper
  *
  * @author pG
  * @version 1.0
- * @package Selligent\Client
+ * @package PgSelligent\Client
  * @copyright 2014
  */
 class Selligent extends EventProvider
@@ -40,8 +40,8 @@ class Selligent extends EventProvider
 
         /**
          * Set list properties
-         * 
-         * get the listId from the first list in config list array 
+         *
+         * get the listId from the first list in config list array
          * this should be the main list but can be overwritten with setListId()
          *
          */

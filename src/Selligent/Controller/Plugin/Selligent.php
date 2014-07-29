@@ -1,14 +1,14 @@
 <?php
 
-namespace Selligent\Controller\Plugin;
+namespace PgSelligent\Controller\Plugin;
 
 use Zend\Mvc\Controller\Plugin\AbstractPlugin;
-use Selligent\Client\Selligent as SelligentClient;
+use PgSelligent\Client\Selligent as SelligentClient;
 
 /**
- * 
+ *
  * Selligent Controller Plugin
- * 
+ *
  * @author pG
  * @package Selligent
  * @since 04-03-2014
